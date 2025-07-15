@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="Calculator.css" />
+</head>
+<body>
+  <h2>Scientific Calculator</h2>
+
+  <div class="calc-container">
+    <div class="display" id="display">0</div>
+
+    <div class="scientific-grid">
+      <button class="btn sci" data-action="sqrt">√</button>
+      <button class="btn sci" data-action="square">x²</button>
+      <button class="btn sci" data-action="pow">xʸ</button>
+      <button class="btn sci" data-action="exp">eˣ</button>
+      <button class="btn sci" data-action="log">log</button>
+      <button class="btn sci" data-action="ln">ln</button>
+      <button class="btn sci" data-action="sin">sin</button>
+      <button class="btn sci" data-action="cos">cos</button>
+      <button class="btn sci" data-action="tan">tan</button>
+      <button class="btn sci" data-action="pi">π</button>
+      <button class="btn sci" data-action="e">e</button>
+      <button class="btn operator" data-action="open">(</button>
+      <button class="btn operator" data-action="close">)</button>
+    </div>
+
+    <div class="button-grid">
+      <button class="btn operator" data-action="clear">C</button>
+      <button class="btn operator" data-action="back">←</button>
+      <button class="btn operator" data-action="percent">%</button>
+      <button class="btn operator" data-action="divide">÷</button>
+
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn operator" data-action="multiply">×</button>
+
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn operator" data-action="subtract">−</button>
+
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn operator" data-action="add">+</button>
+
+      <button class="btn">0</button>
+      <button class="btn">.</button>
+      <button class="btn equal" data-action="equals">=</button>
+    </div>
+
+    <div class="button-grid extra-grid">
+      <button class="btn operator" id="theme-toggle" title="Toggle Theme">🌗</button>
+      <button class="btn operator" id="toggle-history" title="Show History">hist</button>
+      <button class="btn operator" id="clear-history" title="Clear History">Clr</button>
+    </div>
+
+    <div id="history-scroll" style="display: none;">
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+
+  <script src="Calculator.js"></script>
+</body>
+</html>

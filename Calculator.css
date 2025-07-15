@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #274c77;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.calc-container {
+  max-width: 360px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.display {
+  font-size: 2.2rem;
+  padding: 1rem;
+  background-color: #274c77;
+  color: white;
+  text-align: right;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.button-grid, .scientific-grid {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.button-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.scientific-grid {
+  grid-template-columns: repeat(5, 1fr);
+  padding-bottom: 0.5rem;
+}
+
+.extra-grid {
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  padding-top: 0;
+  margin-top: -0.5rem;
+}
+
+.btn {
+  font-size: 1.4rem;
+  padding: 1rem;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #FFCC00;
+  color: #000;
+}
+
+.operator {
+  background-color: #274c77;
+  color: white;
+}
+
+.operator:hover {
+  background-color: #FFCC00;
+  color: #000;
+}
+
+.sci {
+  font-size: 1rem;
+  padding: 0.8rem;
+  background-color: #eee;
+  border-radius: 8px;
+}
+
+.equal {
+  grid-column: span 2;
+  background-color: #FFCC00;
+  color: #000;
+  font-weight: bold;
+}
+
+#history-scroll {
+  max-height: 120px;
+  overflow-y: auto;
+  border-top: 1px solid #ccc;
+  padding: 0.5rem 1rem 0;
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark .calc-container {
+  background-color: #1e1e1e;
+}
+
+body.dark .btn,
+body.dark .operator {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+body.dark .btn:hover,
+body.dark .operator:hover {
+  background-color: #FFCC00;
+  color: black;
+}
+
+body.dark #history-scroll {
+  border-top: 1px solid #555;
+}
